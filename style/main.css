@@ -1,0 +1,1107 @@
+:root {
+    --BRAND_BLUE: #1f80e0;
+    --BRAND_RED: #f15151;
+    --BRAND_ORANGE: #db882a;
+    --BG_GRADIENT_L0: linear-gradient(to bottom, #141b29, #0c111b 300px);
+    --BG_GRADIENT_L1: linear-gradient(to bottom, #192133, #111826);
+    --BG_GRADIENT_L2: linear-gradient(to bottom, #334366, #334366, #1c2940);
+    --CARD_GRADIENT: #030b17;
+    --HEADER_COLOR: #121926;
+    --BG_COLOR_L0: #0c111b;
+    --BG_COLOR_L1: #192133;
+    --BG_COLOR_L2: #334366;
+    --BG_COLOR_L3: rgba(144, 153, 153, 0.1);
+    --BG_COLOR_L4: #1b1f20;
+    --BORDER_COLOR_L0: #2e3333;
+    --TEXT_COLOR_L0: #fff;
+    --TEXT_COLOR_L1: rgba(255, 255, 255, 0.8);
+    --TEXT_COLOR_L2: rgba(255, 255, 255, 0.6);
+    --TEXT_COLOR_L3: #dadada;
+    --TEXT_COLOR_L4: #909999;
+    --TEXT_COLOR_L5: #f9f9f9;
+    --TEXT_LINK_COLOR: #1f80e0;
+    --TEXT_BTN_COLOR: #1f80e0;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.carousel-area h1 {
+    font-size: 3rem;
+}
+.content-info,
+.content-description {
+    font-size: 1.3rem;
+}
+body {
+    background: var(--BG_GRADIENT_L0);
+    text-rendering: auto;
+    color: var(--TEXT_COLOR_L0);
+    font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+}
+li,
+.menu-icon {
+    color: var(--TEXT_COLOR_L1);
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--BG_GRADIENT_L0);
+    font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+    z-index: 9999;
+}
+.nav {
+    min-height: 66px;
+    background: var(--BG_GRADIENT_L0);
+    display: flex;
+    margin: 0 3%;
+}
+svg {
+    height: 25px;
+}
+.logo-image {
+    height: 60px;
+    width: 160px;
+    vertical-align: middle;
+    padding-bottom: 15px;
+}
+/* change list style */
+ul {
+    list-style: none;
+}
+.nav > ul {
+    flex: 1;
+}
+.nav > ul,
+.nav > ul > li > ul,
+.nav > ul ul ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav > ul > li > ul {
+    gap: 30px;
+}
+li,
+button,
+input {
+    cursor: pointer;
+}
+.subscribe-button {
+    padding: 5px 10px;
+    color: #fff;
+    background: var(--BRAND_BLUE);
+    border: none;
+}
+/* search input  */
+.search-container {
+    position: relative;
+}
+.search-input {
+    outline: none;
+    color: var(--TEXT_COLOR_L0);
+    font-size: 1rem;
+    width: 250px;
+    height: 30px;
+    padding: 4px;
+    border: none;
+    border-bottom: 1px solid var(--TEXT_COLOR_L2);
+    background: transparent;
+}
+.search-input:focus-within {
+    width: 350px;
+    border-bottom: 1px solid var(--BRAND_BLUE);
+}
+.input-search-icon {
+    color: var(--TEXT_COLOR_L2);
+    position: absolute;
+    right: 2%;
+    top: 25%;
+    height: 15px;
+}
+/* DropDown */
+.item-list-container {
+    font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+}
+.item-list-container li {
+    position: relative;
+    padding: 20px 10px;
+}
+.item-list-container ul {
+    position: absolute;
+    left: 0;
+}
+.item-list-container ul li {
+    padding: 10px 20px;
+    display: none;
+    /* width: 100% !important; */
+}
+.item-list-container li:hover > ul > li {
+    display: block;
+}
+.item-list-container li ul {
+    display: flex;
+    align-items: stretch !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    background: #192133;
+    top: 100%;
+    font-size: 14px;
+    font-weight: 400;
+}
+.sub-menu-item li:hover {
+    color: var(--TEXT_COLOR_L0);
+    background-color: var(--BG_COLOR_L0);
+}
+/* dropdown menu end */
+/* Login box container */
+.login-container {
+    width: 350px;
+    height: 350px;
+    background: var(--BG_GRADIENT_L1);
+    font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+    color: var(--TEXT_COLOR_L0);
+}
+.login-box {
+    position: absolute;
+    top: 500%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    display: none;
+}
+.login-container {
+    padding: 30px;
+}
+.cancel-button-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.form-description {
+    margin: 3rem 0;
+}
+.form-container {
+    margin: 25% 20px 5% 20px;
+}
+.choice {
+    text-align: center;
+    margin: 1rem;
+}
+.mobile-number-container {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    border-bottom: 1px solid var(--BRAND_BLUE);
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+    align-items: center;
+}
+.country-code {
+    color: var(--TEXT_COLOR_L1);
+    padding-right: 5px;
+    border-right: 1px solid var(--BG_COLOR_L2);
+}
+.mobile-number {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--TEXT_COLOR_L0);
+}
+.mobile-number:focus-visible {
+    outline: none;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.social-media-button {
+    text-align: center;
+    min-height: 50px;
+    color: var(--BRAND_BLUE);
+    background-color: rgba(31, 127, 224, 0.1);
+    border: 1px solid var(--BRAND_BLUE);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 0.9rem;
+    width: 100%;
+    padding: 10px;
+}
+/* Login box container end */
+
+/* carousel */
+section {
+    margin: 0 3%;
+}
+.carousel-section {
+    position: relative;
+    overflow: hidden;
+}
+.carousel-section .btn {
+    height: 20px;
+    width: 20px;
+    background: aquamarine;
+    position: absolute;
+}
+.carousel-section .btn-left {
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.carousel-section .btn-right {
+    right: 0;
+
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.carousel-container {
+    margin: 5% auto;
+    display: flex;
+    width: 300%;
+    gap: 30px;
+    overflow: hidden;
+    position: relative;
+    animation: 20s slider infinite;
+}
+.carousel-container {
+    overflow: hidden;
+}
+.continue-watching-container {
+    overflow: hidden;
+}
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    30% {
+        left: 0;
+    }
+    35% {
+        left: -100%;
+    }
+    60% {
+        left: -100%;
+    }
+    65% {
+        left: -200%;
+    }
+    100% {
+        left: -200%;
+    }
+}
+.carousel-area {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: var(--CARD_GRADIENT);
+    border-radius: 5px;
+}
+.content-image {
+    position: relative;
+}
+.fad-effect {
+    position: absolute;
+    width: 100px;
+    opacity: 1;
+    /* background: var(--BG_GRADIENT_L1); */
+    background: linear-gradient(
+        to right,
+        var(--CARD_GRADIENT),
+        rgba(0, 0, 0, 0)
+    );
+    top: 0;
+    height: 100%;
+    border: none;
+}
+.carousel-image {
+    opacity: 0.6;
+}
+.content-image img {
+    width: 1000px;
+    height: 100%;
+}
+.content-description-container {
+    margin: auto 5%;
+    font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+    cursor: pointer;
+}
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.content-title {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.content-info span {
+    color: var(--TEXT_COLOR_L2);
+}
+.content-description {
+    line-height: 1.71;
+    /* width: 75%; */
+    color: var(--TEXT_COLOR_L1);
+    font-weight: normal;
+}
+.content-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 0;
+    opacity: 0;
+    background: linear-gradient(
+        to left bottom,
+        var(--CARD_GRADIENT),
+        rgba(0, 0, 0, 0)
+    );
+}
+.content-close svg {
+    height: 15px;
+    opacity: 1;
+}
+.content-info span:not(:last-child):after {
+    content: "";
+    font-family: "fontawesome-hotstar";
+    font-size: 3px;
+    font-style: normal;
+    text-decoration: none;
+    padding: 6px;
+    vertical-align: middle;
+}
+/* carousel end */
+/* card-container */
+.continue-watching-container {
+    margin: 3% 0;
+}
+.title .content-title {
+    margin: 1% 0;
+}
+.card-container {
+    position: relative;
+}
+.card-container:hover {
+    z-index: 8888;
+}
+.card-area {
+    /* padding: 5px 0; */
+    cursor: pointer;
+}
+
+.card-area img {
+    height: 100%;
+    width: 300px;
+    border-radius: 5px;
+}
+.card-description {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: none;
+    background: linear-gradient(
+        to right top,
+        var(--CARD_GRADIENT),
+        rgba(0, 0, 0, 0)
+    );
+    opacity: 1;
+    padding: 5px 5px 15px 5px;
+}
+.continue-watching-container .card-description .content-title,
+.continue-watching-container .card-description .content-description,
+.continue-watching-container .content-wrapper .content-title {
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+.card-description .content-wrapper {
+    gap: 1px;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 2px;
+}
+#progress {
+    width: 300px;
+    height: 10px;
+}
+.card-area:hover {
+    /* transition: 0.4s; */
+    transform: scale(1.1);
+}
+.card-area:hover .content-close {
+    opacity: 1;
+}
+.card-area:hover .card-description {
+    display: block;
+}
+.card-container-area {
+    display: flex;
+    gap: 10px;
+}
+/* Scroll bar hide **/
+.card-container-area {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0;
+}
+.card-container-area::-webkit-scrollbar {
+    display: none;
+}
+/* End **/
+.latest-trending img {
+    width: 210px;
+}
+.latest-trending #progress {
+    width: 210px;
+}
+
+/* footer */
+.footer-container {
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-container ul {
+    display: flex;
+    gap: 20px;
+}
+.footer-container p {
+    margin: 20px 0;
+    width: 70%;
+    color: var(--TEXT_COLOR_L4);
+}
+.footer-container ul li:hover {
+    background-attachment: var(--BG_GRADIENT_L2);
+}
+.login-button:hover > .login-box {
+    display: block;
+}
+.social-option {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20%;
+    width: 40%;
+}
+.social-option p {
+    width: 100%;
+    font-size: 12px;
+}
+.social-option a {
+    opacity: 0;
+}
+.social-wrapper {
+    background: url(../img/social-media.svg) left top no-repeat;
+    background-position: 0 40px;
+    width: 90px;
+    height: 85px;
+}
+.store-wrapper {
+    flex: 1;
+    background: url(../img/playstore.svg) left top no-repeat;
+    background-position: 0 40px;
+    width: 90px;
+    height: 85px;
+}
+
+@font-face {
+    font-family: "icomoon";
+    src: url("../fonts/icomoon.eot?boa3mb");
+    src: url("../fonts/icomoon.eot?boa3mb#iefix") format("embedded-opentype"),
+        url("../fonts/icomoon.ttf?boa3mb") format("truetype"),
+        url("../fonts/icomoon.woff?boa3mb") format("woff"),
+        url("../fonts/icomoon.svg?boa3mb#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo .path1:before {
+    content: "\e90b";
+    color: rgb(255, 255, 255);
+}
+.icon-logo .path2:before {
+    content: "\e90c";
+    margin-left: -3.2861328125em;
+    color: rgb(0, 0, 0);
+}
+.icon-logo .path3:before {
+    content: "\e90e";
+    margin-left: -3.2861328125em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path1:before {
+    content: "\e910";
+    color: rgb(25, 33, 51);
+}
+.icon-playstore .path2:before {
+    content: "\e917";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path3:before {
+    content: "\e918";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path4:before {
+    content: "\e919";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path5:before {
+    content: "\e91a";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path6:before {
+    content: "\e91b";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path7:before {
+    content: "\e91c";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path8:before {
+    content: "\e91e";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path9:before {
+    content: "\e91f";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path10:before {
+    content: "\e920";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path11:before {
+    content: "\e923";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path12:before {
+    content: "\e927";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path13:before {
+    content: "\e928";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path14:before {
+    content: "\e929";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path15:before {
+    content: "\e92a";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path16:before {
+    content: "\e92b";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path17:before {
+    content: "\e92c";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path18:before {
+    content: "\e92d";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path19:before {
+    content: "\e92e";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path20:before {
+    content: "\e92f";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path21:before {
+    content: "\e930";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path22:before {
+    content: "\e933";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path23:before {
+    content: "\e934";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path24:before {
+    content: "\e935";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path25:before {
+    content: "\e936";
+    margin-left: -3.0556640625em;
+    color: rgb(25, 33, 51);
+}
+.icon-playstore .path26:before {
+    content: "\e937";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path27:before {
+    content: "\e938";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path28:before {
+    content: "\e939";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path29:before {
+    content: "\e93a";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path30:before {
+    content: "\e93b";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path31:before {
+    content: "\e93c";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path32:before {
+    content: "\e93d";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path33:before {
+    content: "\e93e";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path34:before {
+    content: "\e93f";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path35:before {
+    content: "\e940";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path36:before {
+    content: "\e941";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path37:before {
+    content: "\e942";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path38:before {
+    content: "\e943";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path39:before {
+    content: "\e944";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path40:before {
+    content: "\e945";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path41:before {
+    content: "\e946";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path42:before {
+    content: "\e947";
+    margin-left: -3.0556640625em;
+    color: rgb(177, 195, 211);
+}
+.icon-playstore .path43:before {
+    content: "\e949";
+    margin-left: -3.0556640625em;
+    color: rgb(215, 230, 157);
+}
+.icon-playstore .path44:before {
+    content: "\e94a";
+    margin-left: -3.0556640625em;
+    color: rgb(254, 235, 116);
+}
+.icon-playstore .path45:before {
+    content: "\e94b";
+    margin-left: -3.0556640625em;
+    color: rgb(125, 190, 187);
+}
+.icon-playstore .path46:before {
+    content: "\e94c";
+    margin-left: -3.0556640625em;
+    color: rgb(243, 111, 86);
+}
+.icon-playstore .path47:before {
+    content: "\e94d";
+    margin-left: -3.0556640625em;
+    color: rgb(31, 128, 224);
+}
+.icon-playstore .path48:before {
+    content: "\e94e";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path49:before {
+    content: "\e94f";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path50:before {
+    content: "\e950";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path51:before {
+    content: "\e951";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path52:before {
+    content: "\e952";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path53:before {
+    content: "\e955";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path54:before {
+    content: "\e956";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path55:before {
+    content: "\e957";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path56:before {
+    content: "\e958";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path57:before {
+    content: "\e959";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path58:before {
+    content: "\e95a";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path59:before {
+    content: "\e95b";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path60:before {
+    content: "\e95c";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path61:before {
+    content: "\e95d";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path62:before {
+    content: "\e95e";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path63:before {
+    content: "\e95f";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path64:before {
+    content: "\e960";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path65:before {
+    content: "\e961";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path66:before {
+    content: "\e962";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path67:before {
+    content: "\e963";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path68:before {
+    content: "\e964";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path69:before {
+    content: "\e965";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path70:before {
+    content: "\e966";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path71:before {
+    content: "\e967";
+    margin-left: -3.0556640625em;
+    color: rgb(31, 128, 224);
+}
+.icon-playstore .path72:before {
+    content: "\e968";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path73:before {
+    content: "\e969";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path74:before {
+    content: "\e96a";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path75:before {
+    content: "\e96b";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path76:before {
+    content: "\e96e";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path77:before {
+    content: "\e96f";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path78:before {
+    content: "\e970";
+    margin-left: -3.0556640625em;
+    color: rgb(31, 128, 224);
+}
+.icon-playstore .path79:before {
+    content: "\e971";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path80:before {
+    content: "\e972";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path81:before {
+    content: "\e973";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path82:before {
+    content: "\e974";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path83:before {
+    content: "\e975";
+    margin-left: -3.0556640625em;
+    color: rgb(31, 128, 224);
+}
+.icon-playstore .path84:before {
+    content: "\e976";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path85:before {
+    content: "\e977";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path86:before {
+    content: "\e978";
+    margin-left: -3.0556640625em;
+    color: rgb(31, 128, 224);
+}
+.icon-playstore .path87:before {
+    content: "\e979";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path88:before {
+    content: "\e97a";
+    margin-left: -3.0556640625em;
+    color: rgb(31, 128, 224);
+}
+.icon-playstore .path89:before {
+    content: "\e97b";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path90:before {
+    content: "\e97c";
+    margin-left: -3.0556640625em;
+    color: rgb(31, 128, 224);
+}
+.icon-playstore .path91:before {
+    content: "\e97d";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path92:before {
+    content: "\e97e";
+    margin-left: -3.0556640625em;
+    color: rgb(31, 128, 224);
+}
+.icon-playstore .path93:before {
+    content: "\e97f";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path94:before {
+    content: "\e980";
+    margin-left: -3.0556640625em;
+    color: rgb(31, 128, 224);
+}
+.icon-playstore .path95:before {
+    content: "\e981";
+    margin-left: -3.0556640625em;
+    color: rgb(255, 255, 255);
+}
+.icon-playstore .path96:before {
+    content: "\e982";
+    margin-left: -3.0556640625em;
+    color: rgb(215, 230, 157);
+}
+.icon-playstore .path97:before {
+    content: "\e983";
+    margin-left: -3.0556640625em;
+    color: rgb(254, 235, 116);
+}
+.icon-playstore .path98:before {
+    content: "\e984";
+    margin-left: -3.0556640625em;
+    color: rgb(125, 190, 187);
+}
+.icon-playstore .path99:before {
+    content: "\e985";
+    margin-left: -3.0556640625em;
+    color: rgb(243, 111, 86);
+}
+.icon-social-media .path1:before {
+    content: "\e986";
+    color: rgb(25, 33, 51);
+}
+.icon-social-media .path2:before {
+    content: "\e987";
+    margin-left: -1.529296875em;
+    color: rgb(25, 33, 51);
+}
+.icon-social-media .path3:before {
+    content: "\e988";
+    margin-left: -1.529296875em;
+    color: rgb(25, 33, 51);
+}
+.icon-social-media .path4:before {
+    content: "\e989";
+    margin-left: -1.529296875em;
+    color: rgb(177, 195, 211);
+}
+.icon-social-media .path5:before {
+    content: "\e98a";
+    margin-left: -1.529296875em;
+    color: rgb(31, 128, 224);
+}
+.icon-social-media .path6:before {
+    content: "\e98b";
+    margin-left: -1.529296875em;
+    color: rgb(31, 128, 224);
+}
+.icon-social-media .path7:before {
+    content: "\e98c";
+    margin-left: -1.529296875em;
+    color: rgb(31, 128, 224);
+}
+.icon-social-media .path8:before {
+    content: "\e98d";
+    margin-left: -1.529296875em;
+    color: rgb(255, 255, 255);
+}
+.icon-social-media .path9:before {
+    content: "\e98e";
+    margin-left: -1.529296875em;
+    color: rgb(177, 195, 211);
+}
+.icon-social-media .path10:before {
+    content: "\e98f";
+    margin-left: -1.529296875em;
+    color: rgb(255, 255, 255);
+}
+.icon-kids:before {
+    content: "\e90a";
+    color: #ffaa05;
+}
